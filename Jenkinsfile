@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage('Checkout') {
             steps{
-                    docker bulid -t harbor.test.101nd.cn/dangogo/my-nginx:v2 .
+                    docker build -t harbor.test.101nd.cn/dangogo/my-nginx:v2 .
                     docker login -u 111203 -p Daneil147 harbor.test.101nd.cn
                     docker push harbor.test.101nd.cn/dangogo/my-nginx:v2
                     echo '---This is a Checkout step---'                 
